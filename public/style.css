@@ -1,0 +1,13 @@
+.container-fluid{
+    display:flex;
+    justify-content: center;
+    margin-top: auto;
+    text-align: center;
+}
+#form input{
+    background-color: rgb(1, 2, 2);
+    color: white;
+}
+input::placeholder {
+    color: rgba(223, 22, 22, 0.767);
+  }

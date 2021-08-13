@@ -1,4 +1,11 @@
- const cep = document.querySelector('#cep')
+$(document).ready(function () {
+	$('#logradouro,#bairro,#localidade,#uf').hide();
+	$("#botao").on("click", function(){
+		$("#logradouro,#bairro,#localidade,#uf").show(500);
+	});
+});
+ 
+ const botao = document.querySelector('#botao')
  //////////////////////////////////////////////////////////////////////
  const mostrardados = (resultado) =>{
  	for(const campo in resultado){
@@ -10,7 +17,7 @@
 
  //////////////////////////////////////////////////////////////////
 
- cep.addEventListener('blur',(e) =>{
+ botao.addEventListener('click', (e) =>{
  	let busca = cep.value.replace("-","")
  	const opcoes = {
  		method:"GET",
@@ -27,3 +34,5 @@
  	
  	.catch(e => console.log('Erro ao BUSCAR CEP! ' + e,message))
  })
+
+//  const mover = document.querySelector('')
